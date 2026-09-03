@@ -1,0 +1,38 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    match /leads/{id} {
+      allow read, create, update, delete: if signedIn();
+    }
+
+    match /customers/{id} {
+      allow read, create, update, delete: if signedIn();
+    }
+
+    match /appointments/{id} {
+      allow read, create, update, delete: if signedIn();
+    }
+
+    match /tasks/{id} {
+      allow read, create, update, delete: if signedIn();
+    }
+
+    match /notes/{id} {
+      allow read, create, update, delete: if signedIn();
+    }
+
+    // Append-only activity log: clients may read and create entries,
+    // but never edit or delete history. Cloud Functions write via the
+    // Admin SDK, which is not subject to these rules.
+    match /activity/{id} {
+      allow read, create: if signedIn();
+      allow update, delete: if false;
+    }
+  }
+}
