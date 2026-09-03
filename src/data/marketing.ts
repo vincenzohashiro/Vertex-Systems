@@ -266,7 +266,7 @@ export const processSteps: ProcessStep[] = [
   { step: 'Support', description: 'Stay involved after launch as the business changes.' },
 ]
 
-export const teamRoles = ['Engineering', 'Design', 'Systems & Automation']
+export const teamRoles = ['Systems & Automation', 'Design and Marketing', 'Leads Management and Customer Service']
 
 export const teamBlurb =
   'Vertex Systems is a small, technical team that designs and builds the software businesses run on. ' +

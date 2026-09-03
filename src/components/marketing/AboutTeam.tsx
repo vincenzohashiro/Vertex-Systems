@@ -3,6 +3,7 @@ import { accentClasses, Card, type Accent } from '../ui'
 import Reveal from './Reveal'
 
 const roleAccents: Accent[] = ['indigo', 'emerald', 'amber']
+const initialsStopWords = new Set(['and', '&', 'the', 'of', 'for'])
 
 export default function AboutTeam() {
   return (
@@ -20,10 +21,11 @@ export default function AboutTeam() {
               const accent = roleAccents[i % roleAccents.length]
               const initials = role
                 .split(/[\s&]+/)
-                .filter(Boolean)
+                .filter((w) => w && !initialsStopWords.has(w.toLowerCase()))
                 .slice(0, 2)
                 .map((w) => w[0])
                 .join('')
+                .toUpperCase()
               return (
                 <div key={role} className="flex flex-col items-center gap-2 rounded-lg p-3 text-center">
                   <div className={`flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold ${accentClasses[accent]}`}>
