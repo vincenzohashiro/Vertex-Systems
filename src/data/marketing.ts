@@ -202,7 +202,7 @@ export const techStack: TechCategory[] = [
   { category: 'Backend & Data', items: ['Node.js', 'Python', 'Firebase', 'Supabase', 'PostgreSQL'] },
   { category: 'Automation & Integrations', items: ['Make.com', 'Zapier', 'Monday.com', 'API Integrations', 'Webhooks', 'CRM Integrations'] },
   { category: 'Payments', items: ['PayMongo', 'PayPal', 'Stripe', 'Wise', 'E-Wallets'] },
-  { category: 'Platforms & Tools', items: ['WordPress', 'GitHub', 'Figma', 'Adobe Photoshop'] },
+  { category: 'Platforms & Tools', items: ['WordPress', 'GitHub', 'Figma', 'Adobe Photoshop', 'Canva', 'Adobe Premiere', 'GoDaddy', 'Lovable'] },
 ]
 
 export type DemoStatus = 'Live' | 'Preview'
