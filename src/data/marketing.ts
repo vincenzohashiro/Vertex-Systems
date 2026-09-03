@@ -61,9 +61,19 @@ export const clientWork: ClientWorkItem[] = [
     category: 'Business Website',
     description:
       'Business website developed for a performance marketing and lead generation agency, presenting its services clearly and giving prospective clients a direct path to get in touch.',
-    tags: ['Business Website'],
+    tags: ['Business Website', 'Booking', 'Automated Lead Handler'],
     status: 'live',
     screenshot: '/projects/angel-creative-ads.png',
+  },
+  {
+    title: 'Håreksperten',
+    url: 'https://haareksperten.com/',
+    category: 'Business Website + Consultation',
+    description:
+      'Professional website project for Håreksperten, a Danish hair-transplantation business serving customers seeking treatment in Istanbul. The site combines service information, treatment education, pricing, results, customer testimonials, and a structured consultation journey into a single customer-facing platform.',
+    tags: ['Business Website', 'International', 'Consultation Flow', 'CRM System', 'Automated Lead Handler', 'Business Integrations'],
+    status: 'live',
+    screenshot: '/projects/haareksperten-website.png',
   },
   {
     title: 'Haareksperten KPI Dashboard',
@@ -198,15 +208,15 @@ export interface TechCategory {
 }
 
 export const techStack: TechCategory[] = [
-  { category: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React.js'] },
-  { category: 'Backend & Data', items: ['Node.js', 'Python', 'Firebase', 'Supabase', 'PostgreSQL'] },
+  { category: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React.js', 'Tailwind'] },
+  { category: 'Backend & Data', items: ['Node.js', 'Python', 'PHP', 'GoLang', 'Firebase', 'Supabase', 'PostgreSQL', 'MySQL'] },
   { category: 'Automation & Integrations', items: ['Make.com', 'Zapier', 'Monday.com', 'API Integrations', 'Webhooks', 'CRM Integrations'] },
   { category: 'Payments', items: ['PayMongo', 'PayPal', 'Stripe', 'Wise', 'E-Wallets'] },
   { category: 'Platforms & Tools', items: ['WordPress', 'GitHub', 'Figma', 'Adobe Photoshop', 'Canva', 'Adobe Premiere', 'GoDaddy', 'Lovable'] },
 ]
 
 export type DemoStatus = 'Live' | 'Preview'
-export type DemoAccent = 'indigo' | 'emerald' | 'amber' | 'rose'
+export type DemoAccent = 'blue' | 'emerald' | 'amber' | 'rose'
 
 export interface SystemDemoItem {
   title: string
@@ -224,7 +234,7 @@ export const systemDemos: SystemDemoItem[] = [
     icon: Users,
     href: '/systems/crm',
     status: 'Live',
-    accent: 'indigo',
+    accent: 'blue',
   },
   {
     title: 'Booking Platform',

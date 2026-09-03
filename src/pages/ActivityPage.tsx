@@ -25,7 +25,7 @@ const colors: Record<ActivityType, string> = {
   customer: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300',
   task: 'bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300',
   note: 'bg-purple-50 text-purple-600 dark:bg-purple-500/10 dark:text-purple-300',
-  appointment: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300',
+  appointment: 'bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-300',
   deal: 'bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-300',
 }
 

@@ -51,7 +51,7 @@ export default function Reports() {
     <div className="space-y-6">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label="Total MRR" value={`$${totalMrr.toLocaleString()}`} icon={DollarSign} accent="emerald" />
-        <StatCard label="Avg Deal Size" value={`$${avgDealSize.toLocaleString()}`} icon={TrendingUp} accent="indigo" />
+        <StatCard label="Avg Deal Size" value={`$${avgDealSize.toLocaleString()}`} icon={TrendingUp} accent="blue" />
         <StatCard label="Active Customers" value={String(customers.length)} icon={Users} accent="amber" />
         <StatCard label="Qualification Rate" value={`${wonRate}%`} icon={Percent} accent="rose" />
       </div>

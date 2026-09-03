@@ -11,10 +11,10 @@ export function Card({ children, className = '' }: { children: ReactNode; classN
   )
 }
 
-export type Accent = 'indigo' | 'emerald' | 'amber' | 'rose'
+export type Accent = 'blue' | 'emerald' | 'amber' | 'rose'
 
 export const accentClasses: Record<Accent, string> = {
-  indigo: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300',
+  blue: 'bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-300',
   emerald: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300',
   amber: 'bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300',
   rose: 'bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-300',
@@ -24,7 +24,7 @@ export function StatCard({
   label,
   value,
   icon: Icon,
-  accent = 'indigo',
+  accent = 'blue',
   trend,
 }: {
   label: string
@@ -51,7 +51,7 @@ const badgeColors: Record<string, string> = {
   // lead statuses
   New: 'bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300',
   Contacted: 'bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300',
-  Qualified: 'bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300',
+  Qualified: 'bg-blue-50 text-blue-700 dark:bg-blue-500/10 dark:text-blue-300',
   Proposal: 'bg-purple-50 text-purple-700 dark:bg-purple-500/10 dark:text-purple-300',
   Lost: 'bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400',
   // customer health

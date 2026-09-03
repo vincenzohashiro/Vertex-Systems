@@ -19,6 +19,10 @@ firebase-debug.log
 firebase-debug.*.log
 ui-debug.log
 
+# Claude Code local tooling
+.claude
+skills-lock.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

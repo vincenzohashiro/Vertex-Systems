@@ -1,6 +1,7 @@
-import { Briefcase, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { systemDemos } from '../../data/marketing'
+import VertexMark from '../VertexMark'
 
 const sectionLinks = [
   { id: 'what-we-build', label: 'What We Build' },
@@ -18,9 +19,7 @@ export default function MarketingFooter() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-white">
-                <Briefcase size={18} />
-              </div>
+              <VertexMark className="h-8 w-auto" />
               <span className="font-display text-base font-bold text-slate-900 dark:text-slate-100">Vertex Systems</span>
             </Link>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-500 dark:text-slate-400">
@@ -66,7 +65,7 @@ export default function MarketingFooter() {
           <p className="text-xs text-slate-400">© {new Date().getFullYear()} Vertex Systems. All rights reserved.</p>
           <button
             onClick={() => goToSection('contact')}
-            className="flex items-center gap-1.5 text-xs font-medium text-slate-500 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+            className="flex items-center gap-1.5 text-xs font-medium text-slate-500 transition-colors hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400"
           >
             <Mail size={13} />
             Start a project

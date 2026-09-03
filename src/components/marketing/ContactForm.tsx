@@ -4,10 +4,10 @@ import { Card } from '../ui'
 import Reveal from './Reveal'
 
 const inputClasses =
-  'w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 transition-colors focus:border-indigo-400 focus:outline-none focus:ring-4 focus:ring-indigo-500/10 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200'
+  'w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 transition-colors focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-500/10 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200'
 
 const infoItems = [
-  { icon: Mail, text: 'Direct line to the engineers building it: no sales layer.' },
+  { icon: Mail, text: 'Direct line to the team building it: no sales layer.' },
   { icon: Clock, text: "We'll respond within 48 hours with next steps." },
   { icon: MessageSquare, text: 'A short discovery call comes first, no obligation.' },
 ]
@@ -25,26 +25,36 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
-        <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">Get Started</p>
-          <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 dark:text-slate-100">Start a Project</h2>
-          <p className="mt-3 max-w-md text-slate-600 dark:text-slate-400">Tell us what you're trying to build.</p>
-
-          <ul className="mt-8 space-y-4">
-            {infoItems.map(({ icon: Icon, text }) => (
-              <li key={text} className="flex items-start gap-3">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300">
-                  <Icon size={15} />
-                </div>
-                <p className="pt-1.5 text-sm text-slate-600 dark:text-slate-400">{text}</p>
-              </li>
-            ))}
-          </ul>
+    <section id="contact" className="relative overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-screen">
+        <Reveal className="relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-white lg:min-h-screen">
+          <img
+            src="/vertex-logo-full.png"
+            alt="Vertex Systems"
+            className="h-auto max-h-[60vh] w-full max-w-md object-contain p-10"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/15 via-transparent to-blue-950/15" />
         </Reveal>
 
-        <Reveal delay={100}>
+        <div className="flex flex-col justify-center gap-10 px-6 py-16 sm:px-12 lg:px-16">
+          <Reveal delay={80}>
+            <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Get Started</p>
+            <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 dark:text-slate-100">Start a Project</h2>
+            <p className="mt-3 max-w-md text-slate-600 dark:text-slate-400">Tell us what you're trying to build.</p>
+
+            <ul className="mt-6 space-y-4">
+              {infoItems.map(({ icon: Icon, text }) => (
+                <li key={text} className="flex items-start gap-3">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-300">
+                    <Icon size={15} />
+                  </div>
+                  <p className="pt-1.5 text-sm text-slate-600 dark:text-slate-400">{text}</p>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+
+          <Reveal delay={160}>
           <Card>
             {submitted ? (
               <div className="flex flex-col items-center gap-3 py-8 text-center">
@@ -83,14 +93,15 @@ export default function ContactForm() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-indigo-600 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-600/20 transition-all hover:bg-indigo-500 hover:shadow-md hover:shadow-indigo-600/30"
+                  className="w-full rounded-lg bg-blue-600 py-2.5 text-sm font-medium text-white shadow-sm shadow-blue-600/20 transition-all hover:bg-blue-500 hover:shadow-md hover:shadow-blue-600/30"
                 >
                   Send
                 </button>
               </form>
             )}
           </Card>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
     </section>
   )

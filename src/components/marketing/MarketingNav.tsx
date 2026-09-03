@@ -1,6 +1,7 @@
-import { Briefcase, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import VertexMark from '../VertexMark'
 
 const navItems = [
   { id: 'what-we-build', label: 'What We Build' },
@@ -46,9 +47,7 @@ export default function MarketingNav() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-white">
-            <Briefcase size={18} />
-          </div>
+          <VertexMark className="h-8 w-auto" />
           <span className="font-display text-base font-bold text-slate-900 dark:text-slate-100">Vertex Systems</span>
         </Link>
 
@@ -67,7 +66,7 @@ export default function MarketingNav() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => goToSection('contact')}
-            className="hidden rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-indigo-600/20 transition-all hover:bg-indigo-500 hover:shadow-md hover:shadow-indigo-600/30 sm:inline-flex"
+            className="hidden rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-blue-600/20 transition-all hover:bg-blue-500 hover:shadow-md hover:shadow-blue-600/30 sm:inline-flex"
           >
             Start a Project
           </button>
@@ -99,7 +98,7 @@ export default function MarketingNav() {
           ))}
           <button
             onClick={() => goToSection('contact')}
-            className="mt-2 rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-indigo-500"
+            className="mt-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-blue-500"
           >
             Start a Project
           </button>

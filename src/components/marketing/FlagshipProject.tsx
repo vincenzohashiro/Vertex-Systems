@@ -8,7 +8,7 @@ export default function FlagshipProject() {
     <section id="flagship" className="relative overflow-hidden bg-slate-950 py-24">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-[32rem] w-[48rem] -translate-x-1/2 rounded-full bg-gradient-to-br from-violet-600/30 via-indigo-600/20 to-transparent blur-3xl"
+        className="pointer-events-none absolute -top-40 left-1/2 h-[32rem] w-[48rem] -translate-x-1/2 rounded-full bg-gradient-to-br from-violet-600/30 via-blue-600/20 to-transparent blur-3xl"
       />
       <div className="bg-grid pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_20%,black_30%,transparent_100%)]" />
 
@@ -25,7 +25,7 @@ export default function FlagshipProject() {
         <div className="mt-12 grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
           <Reveal delay={100}>
             <div className="relative">
-              <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-violet-500/20 to-indigo-500/10 blur-xl" />
+              <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-violet-500/20 to-blue-500/10 blur-xl" />
               <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/40">
                 <div className="flex items-center gap-1.5 border-b border-white/10 bg-slate-900 px-4 py-3">
                   <span className="h-2.5 w-2.5 rounded-full bg-rose-400/70" />

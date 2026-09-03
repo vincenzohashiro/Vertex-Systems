@@ -7,7 +7,7 @@ import Reveal from '../../components/marketing/Reveal'
 function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
     <Reveal>
-      <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">{eyebrow}</p>
+      <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">{eyebrow}</p>
       <h2 className="mt-2 font-display text-2xl font-bold text-slate-900 sm:text-3xl dark:text-slate-100">{title}</h2>
     </Reveal>
   )
@@ -19,7 +19,7 @@ export default function ZelvariaCaseStudy() {
       <section className="relative overflow-hidden bg-slate-950 py-20">
         <div
           aria-hidden
-          className="pointer-events-none absolute -top-40 left-1/2 h-[32rem] w-[48rem] -translate-x-1/2 rounded-full bg-gradient-to-br from-violet-600/30 via-indigo-600/20 to-transparent blur-3xl"
+          className="pointer-events-none absolute -top-40 left-1/2 h-[32rem] w-[48rem] -translate-x-1/2 rounded-full bg-gradient-to-br from-violet-600/30 via-blue-600/20 to-transparent blur-3xl"
         />
         <div className="relative mx-auto max-w-4xl px-6">
           <Reveal>
@@ -54,7 +54,7 @@ export default function ZelvariaCaseStudy() {
 
           <Reveal delay={100}>
             <div className="relative mt-12">
-              <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-violet-500/20 to-indigo-500/10 blur-xl" />
+              <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-violet-500/20 to-blue-500/10 blur-xl" />
               <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/40">
                 <div className="flex items-center gap-1.5 border-b border-white/10 bg-slate-900 px-4 py-3">
                   <span className="h-2.5 w-2.5 rounded-full bg-rose-400/70" />
@@ -123,7 +123,7 @@ export default function ZelvariaCaseStudy() {
 
           <Reveal delay={140}>
             <div className="relative mt-14">
-              <div className="mx-auto w-fit rounded-lg border border-indigo-200 bg-indigo-50 px-4 py-2.5 text-sm font-semibold text-indigo-700 dark:border-indigo-500/20 dark:bg-indigo-500/10 dark:text-indigo-300">
+              <div className="mx-auto w-fit rounded-lg border border-blue-200 bg-blue-50 px-4 py-2.5 text-sm font-semibold text-blue-700 dark:border-blue-500/20 dark:bg-blue-500/10 dark:text-blue-300">
                 Zelvaria Platform
               </div>
               <div className="mx-auto mt-3 h-6 w-px bg-slate-300 dark:bg-slate-700" />
@@ -133,7 +133,7 @@ export default function ZelvariaCaseStudy() {
                   <div key={node.title} className="flex min-w-0 flex-col items-center gap-2">
                     <div className="h-3 w-px bg-slate-300 dark:bg-slate-700" />
                     <Card className="flex w-full min-w-0 flex-col items-center gap-2 text-center">
-                      <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-300">
                         <node.icon size={18} />
                       </div>
                       <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">{node.title}</p>
@@ -152,7 +152,7 @@ export default function ZelvariaCaseStudy() {
           <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {flagshipProject.highlights.map((item) => (
               <li key={item} className="flex items-start gap-2.5 text-sm text-slate-700 dark:text-slate-300">
-                <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-indigo-600 dark:text-indigo-400" />
+                <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-blue-600 dark:text-blue-400" />
                 {item}
               </li>
             ))}
@@ -165,7 +165,7 @@ export default function ZelvariaCaseStudy() {
           <SectionHeading eyebrow="Database" title="Supabase & PostgreSQL" />
           <Reveal delay={80}>
             <Card className="mt-8 flex items-start gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-300">
                 <Database size={20} />
               </div>
               <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
@@ -235,7 +235,7 @@ export default function ZelvariaCaseStudy() {
       <section className="bg-slate-50 py-16 dark:bg-slate-900/40">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+            <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
               Live Demonstration
             </p>
             <h2 className="mt-2 font-display text-2xl font-bold text-slate-900 sm:text-3xl dark:text-slate-100">
@@ -249,7 +249,7 @@ export default function ZelvariaCaseStudy() {
               href={flagshipProject.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-600/20 transition-all hover:bg-indigo-500 hover:shadow-md hover:shadow-indigo-600/30"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm shadow-blue-600/20 transition-all hover:bg-blue-500 hover:shadow-md hover:shadow-blue-600/30"
             >
               Visit Live Site
               <ExternalLink size={16} />

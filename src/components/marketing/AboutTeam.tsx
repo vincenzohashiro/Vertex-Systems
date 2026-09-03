@@ -2,7 +2,7 @@ import { teamBlurb, teamRoles } from '../../data/marketing'
 import { accentClasses, Card, type Accent } from '../ui'
 import Reveal from './Reveal'
 
-const roleAccents: Accent[] = ['indigo', 'emerald', 'amber']
+const roleAccents: Accent[] = ['blue', 'emerald', 'amber']
 const initialsStopWords = new Set(['and', '&', 'the', 'of', 'for'])
 
 export default function AboutTeam() {
@@ -10,7 +10,7 @@ export default function AboutTeam() {
     <section id="about" className="mx-auto max-w-6xl px-6 py-20">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
         <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">Who We Are</p>
+          <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Who We Are</p>
           <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 dark:text-slate-100">About the Team</h2>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-600 dark:text-slate-400">{teamBlurb}</p>
         </Reveal>

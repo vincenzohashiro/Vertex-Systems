@@ -8,7 +8,7 @@ export default function ClientWork() {
     <section id="work" className="bg-slate-50 py-20 dark:bg-slate-900/40">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">Client Work</p>
+          <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Client Work</p>
           <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 dark:text-slate-100">Professional Experience</h2>
           <p className="mt-2 max-w-xl text-sm text-slate-500 dark:text-slate-400">
             Real websites built for real businesses, live for their customers today.
@@ -33,7 +33,7 @@ export default function ClientWork() {
                   )}
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
                     {project.category}
                   </p>
                   <p className="mt-2 text-sm font-semibold text-slate-900 dark:text-slate-100">{project.title}</p>
@@ -58,7 +58,7 @@ export default function ClientWork() {
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 transition-colors hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 transition-colors hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
                       >
                         Visit Website
                         <ExternalLink size={14} />

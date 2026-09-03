@@ -31,7 +31,7 @@ export default function Tasks() {
                   type="checkbox"
                   checked={t.done}
                   onChange={() => toggle(t.id, t.done)}
-                  className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                  className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                 />
                 <div>
                   <p className="text-sm font-medium text-slate-800 dark:text-slate-200">{t.title}</p>
@@ -60,7 +60,7 @@ export default function Tasks() {
                   type="checkbox"
                   checked={t.done}
                   onChange={() => toggle(t.id, t.done)}
-                  className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                  className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                 />
                 <p className="text-sm font-medium text-slate-800 line-through dark:text-slate-200">{t.title}</p>
               </div>

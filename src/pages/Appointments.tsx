@@ -4,7 +4,7 @@ import { Card } from '../components/ui'
 
 const typeColors: Record<string, string> = {
   Call: 'bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300',
-  Demo: 'bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300',
+  Demo: 'bg-blue-50 text-blue-700 dark:bg-blue-500/10 dark:text-blue-300',
   Meeting: 'bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300',
   'Follow-up': 'bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300',
 }
