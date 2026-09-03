@@ -201,7 +201,7 @@ export const techStack: TechCategory[] = [
   { category: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React.js'] },
   { category: 'Backend & Data', items: ['Node.js', 'Python', 'Firebase', 'Supabase', 'PostgreSQL'] },
   { category: 'Automation & Integrations', items: ['Make.com', 'Zapier', 'Monday.com', 'API Integrations', 'Webhooks', 'CRM Integrations'] },
-  { category: 'Payments', items: ['PayMongo', 'PayPal'] },
+  { category: 'Payments', items: ['PayMongo', 'PayPal', 'Stripe', 'Wise', 'E-Wallets'] },
   { category: 'Platforms & Tools', items: ['WordPress', 'GitHub', 'Figma', 'Adobe Photoshop'] },
 ]
 
