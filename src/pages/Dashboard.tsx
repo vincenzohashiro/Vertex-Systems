@@ -36,7 +36,7 @@ export default function Dashboard() {
         <Card className="lg:col-span-2">
           <div className="mb-4 flex items-center justify-between">
             <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100">Upcoming Appointments</h2>
-            <Link to="/appointments" className="text-xs font-medium text-indigo-600 hover:underline dark:text-indigo-400">
+            <Link to="/systems/crm/appointments" className="text-xs font-medium text-indigo-600 hover:underline dark:text-indigo-400">
               View all
             </Link>
           </div>
@@ -59,7 +59,7 @@ export default function Dashboard() {
         <Card>
           <div className="mb-4 flex items-center justify-between">
             <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100">Recent Activity</h2>
-            <Link to="/activity" className="text-xs font-medium text-indigo-600 hover:underline dark:text-indigo-400">
+            <Link to="/systems/crm/activity" className="text-xs font-medium text-indigo-600 hover:underline dark:text-indigo-400">
               View all
             </Link>
           </div>
@@ -79,7 +79,7 @@ export default function Dashboard() {
       <Card>
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100">Pipeline Snapshot</h2>
-          <Link to="/leads" className="text-xs font-medium text-indigo-600 hover:underline dark:text-indigo-400">
+          <Link to="/systems/crm/leads" className="text-xs font-medium text-indigo-600 hover:underline dark:text-indigo-400">
             View leads
           </Link>
         </div>

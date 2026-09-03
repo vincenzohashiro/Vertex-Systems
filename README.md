@@ -1,26 +1,26 @@
-# Vertex Systems — CRM Demo
+# Vertex Systems
 
-A Website + CRM demonstration project.
+The Vertex Systems company website: a marketing site for a small business-systems/automation/software-development agency, with a working CRM demo and three system-demo previews built in.
 
 ```
-Dashboard
-├── Leads
-├── Customers
-├── Appointments
-├── Tasks
-├── Notes
-├── Activity
-└── Reports
+/                     marketing site (hero, what we build, selected work,
+                      system demonstrations, how we work, about, contact)
+/systems/crm/*        CRM demo — Dashboard, Leads, Customers, Appointments,
+                      Tasks, Notes, Activity, Reports (auth-gated when a
+                      Firebase project is connected, open in demo mode)
+/systems/booking      Booking Platform — preview page
+/systems/operations   Operations Platform — preview page
+/systems/automation   Automation System — preview page
 ```
 
-**Stack:** React + TypeScript + Vite + Tailwind (frontend) · Firebase Cloud Functions / Node.js (backend) · Firestore (database) · Firebase Auth (login) · REST API + inbound/outbound webhooks · Make.com (automation).
+**Stack:** React + TypeScript + Vite + Tailwind (frontend) · Firebase Cloud Functions / Node.js (backend, CRM only) · Firestore (database) · Firebase Auth (CRM login) · REST API + inbound/outbound webhooks · Make.com (automation).
 
-## Status: scaffolded, not yet connected
+## Status: CRM backend scaffolded, not yet connected
 
-The backend (Firebase project, Cloud Functions, Make.com scenarios) hasn't been created yet — this repo has all the code for it, wired to placeholders. Right now:
+The marketing site (`/`) and the three system-demo preview pages are static — no backend involved. The CRM demo's backend (Firebase project, Cloud Functions, Make.com scenarios) hasn't been created yet — this repo has all the code for it, wired to placeholders. Right now:
 
-- `npm run dev` runs the app against **local mock data** (the "Demo data" badge in the top bar confirms this) — no setup required.
-- The moment you fill in `.env.local` with a real Firebase project's config, the same pages switch to **live Firestore data** automatically (badge flips to "Live") — no code changes needed.
+- `npm run dev` runs the CRM against **local mock data** (the "Demo data" badge in its top bar confirms this) — no setup required.
+- The moment you fill in `.env.local` with a real Firebase project's config, the CRM switches to **live Firestore data** automatically (badge flips to "Live") — no code changes needed.
 
 ## Architecture
 
@@ -152,13 +152,22 @@ Runs Auth, Firestore, and Functions emulators together (see `firebase.json`). Po
 
 ```
 src/
-  data/            mock data + shared TypeScript types (used as the demo-mode fallback)
+  data/
+    marketing.ts     static content for the marketing site (services, work, demos, process, team)
+    *.ts             CRM mock data + shared TypeScript types (used as the demo-mode fallback)
   lib/
     firebase.ts              Firebase client SDK init
     AuthContext.tsx           sign-in state, gated off when unconfigured
     firestoreCollections.ts   live Firestore hooks + mock-data fallback, per collection
-  components/       layout (sidebar, topbar), route guard, shared UI primitives
-  pages/            one page per sidebar section, plus Login
+  components/
+    marketing/       marketing site nav/footer/layout + one component per homepage section
+    ui.tsx            shared Card/Badge/StatCard primitives, used by both the marketing site and the CRM
+    Sidebar.tsx, Layout.tsx, Topbar.tsx, ProtectedRoute.tsx   CRM app shell
+  pages/
+    marketing/Home.tsx         composes the homepage sections
+    systems/                   3 system-demo preview pages (Booking/Operations/Automation),
+                                built from components/marketing/SystemStubPage.tsx
+    Dashboard.tsx, Leads.tsx, ...   CRM pages (mounted under /systems/crm), plus Login.tsx
 functions/
   src/
     admin.ts          Firebase Admin SDK init

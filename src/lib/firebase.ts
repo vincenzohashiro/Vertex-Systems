@@ -4,7 +4,7 @@ import { getFirestore } from 'firebase/firestore'
 
 // PLACEHOLDER MODE: with no VITE_FIREBASE_* env vars set (see .env.example),
 // the SDK still needs *some* non-empty values to initialize without
-// throwing — real auth/data calls are gated off elsewhere (see
+// throwing: real auth/data calls are gated off elsewhere (see
 // firestoreCollections.ts and AuthContext.tsx) so these placeholders are
 // never actually used against a backend.
 const firebaseConfig = {

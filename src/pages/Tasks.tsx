@@ -46,7 +46,7 @@ export default function Tasks() {
               </div>
             </div>
           ))}
-          {open.length === 0 && <p className="py-4 text-sm text-slate-400">Nothing open — nice work.</p>}
+          {open.length === 0 && <p className="py-4 text-sm text-slate-400">Nothing open, nice work.</p>}
         </div>
       </Card>
 

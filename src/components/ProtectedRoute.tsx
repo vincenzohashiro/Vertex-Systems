@@ -18,7 +18,7 @@ export default function ProtectedRoute() {
   }
 
   if (!user) {
-    return <Navigate to="/login" replace state={{ from: location.pathname }} />
+    return <Navigate to="/systems/crm/login" replace state={{ from: location.pathname }} />
   }
 
   return <Outlet />

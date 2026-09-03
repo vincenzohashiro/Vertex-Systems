@@ -3,14 +3,14 @@ import Sidebar from './Sidebar'
 import Topbar from './Topbar'
 
 const titles: Record<string, string> = {
-  '/': 'Dashboard',
-  '/leads': 'Leads',
-  '/customers': 'Customers',
-  '/appointments': 'Appointments',
-  '/tasks': 'Tasks',
-  '/notes': 'Notes',
-  '/activity': 'Activity',
-  '/reports': 'Reports',
+  '/systems/crm': 'Dashboard',
+  '/systems/crm/leads': 'Leads',
+  '/systems/crm/customers': 'Customers',
+  '/systems/crm/appointments': 'Appointments',
+  '/systems/crm/tasks': 'Tasks',
+  '/systems/crm/notes': 'Notes',
+  '/systems/crm/activity': 'Activity',
+  '/systems/crm/reports': 'Reports',
 }
 
 export default function Layout() {
