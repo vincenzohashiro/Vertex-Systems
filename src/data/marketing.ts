@@ -56,16 +56,6 @@ export const clientWork: ClientWorkItem[] = [
     screenshot: '/projects/ab-barberlounge.png',
   },
   {
-    title: 'Angel Creative Ads',
-    url: 'https://angelcreativeads.com/',
-    category: 'Business Website',
-    description:
-      'Business website developed for a performance marketing and lead generation agency, presenting its services clearly and giving prospective clients a direct path to get in touch.',
-    tags: ['Business Website', 'Booking', 'Automated Lead Handler'],
-    status: 'live',
-    screenshot: '/projects/angel-creative-ads.png',
-  },
-  {
     title: 'Håreksperten',
     url: 'https://haareksperten.com/',
     category: 'Business Website + Consultation',
@@ -101,6 +91,20 @@ export const clientWork: ClientWorkItem[] = [
     description: 'A project currently being documented. Details will be added once the scope is confirmed.',
     tags: [],
     status: 'unavailable',
+  },
+]
+
+// Archived: not currently shown in Client Work. Restore by moving back into clientWork.
+export const archivedClientWork: ClientWorkItem[] = [
+  {
+    title: 'Angel Creative Ads',
+    url: 'https://angelcreativeads.com/',
+    category: 'Business Website',
+    description:
+      'Business website developed for a performance marketing and lead generation agency, presenting its services clearly and giving prospective clients a direct path to get in touch.',
+    tags: ['Business Website', 'Booking', 'Automated Lead Handler'],
+    status: 'live',
+    screenshot: '/projects/angel-creative-ads.png',
   },
 ]
 

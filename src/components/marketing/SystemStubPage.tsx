@@ -1,4 +1,5 @@
 import { ArrowLeft, CheckCircle, type LucideIcon } from 'lucide-react'
+import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { accentClasses, type Accent, Badge, Card } from '../ui'
 
@@ -8,9 +9,10 @@ interface SystemStubPageProps {
   icon: LucideIcon
   accent: Accent
   features: string[]
+  children?: ReactNode
 }
 
-export default function SystemStubPage({ title, tagline, icon: Icon, accent, features }: SystemStubPageProps) {
+export default function SystemStubPage({ title, tagline, icon: Icon, accent, features, children }: SystemStubPageProps) {
   return (
     <div className="mx-auto max-w-4xl px-6 py-20">
       <Link
@@ -45,17 +47,19 @@ export default function SystemStubPage({ title, tagline, icon: Icon, accent, fea
         </ul>
       </Card>
 
-      <Card className="mt-4">
-        <div className={`h-2 w-24 rounded-full ${accentClasses[accent]}`} />
-        <div className="mt-5 grid grid-cols-3 gap-3">
-          <div className="col-span-2 h-24 rounded-lg bg-slate-100 dark:bg-slate-800" />
-          <div className="h-24 rounded-lg bg-slate-100 dark:bg-slate-800" />
-          <div className="h-16 rounded-lg bg-slate-100 dark:bg-slate-800" />
-          <div className="h-16 rounded-lg bg-slate-100 dark:bg-slate-800" />
-          <div className="h-16 rounded-lg bg-slate-100 dark:bg-slate-800" />
-        </div>
-        <p className="mt-5 text-xs text-slate-400">Full interactive demo in progress.</p>
-      </Card>
+      {children ?? (
+        <Card className="mt-4">
+          <div className={`h-2 w-24 rounded-full ${accentClasses[accent]}`} />
+          <div className="mt-5 grid grid-cols-3 gap-3">
+            <div className="col-span-2 h-24 rounded-lg bg-slate-100 dark:bg-slate-800" />
+            <div className="h-24 rounded-lg bg-slate-100 dark:bg-slate-800" />
+            <div className="h-16 rounded-lg bg-slate-100 dark:bg-slate-800" />
+            <div className="h-16 rounded-lg bg-slate-100 dark:bg-slate-800" />
+            <div className="h-16 rounded-lg bg-slate-100 dark:bg-slate-800" />
+          </div>
+          <p className="mt-5 text-xs text-slate-400">Full interactive demo in progress.</p>
+        </Card>
+      )}
     </div>
   )
 }

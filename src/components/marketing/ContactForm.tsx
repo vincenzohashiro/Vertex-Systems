@@ -26,15 +26,21 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="relative overflow-hidden">
+    <section id="contact" className="relative overflow-hidden bg-white dark:bg-slate-950">
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-screen">
-        <Reveal className="relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-white lg:min-h-screen">
-          <img
-            src={assetPath('/vertex-logo-full.png')}
-            alt="Vertex Systems"
-            className="h-auto max-h-[60vh] w-full max-w-md object-contain p-10"
+        <Reveal className="relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-slate-950 p-10 lg:min-h-screen">
+          <div className="bg-grid pointer-events-none absolute inset-0 opacity-20 [mask-image:radial-gradient(ellipse_65%_65%_at_50%_50%,black_30%,transparent_100%)]" />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-blue-600/20 blur-3xl"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/15 via-transparent to-blue-950/15" />
+          <div className="group relative rounded-3xl bg-white p-8 shadow-2xl shadow-black/50 ring-1 ring-black/5 transition-transform duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] sm:p-10">
+            <img
+              src={assetPath('/vertex-logo-full.png')}
+              alt="Vertex Systems"
+              className="h-auto max-h-[40vh] w-full max-w-xs object-contain transition-transform duration-500 group-hover:scale-105 sm:max-w-sm"
+            />
+          </div>
         </Reveal>
 
         <div className="flex flex-col justify-center gap-10 px-6 py-16 sm:px-12 lg:px-16">
@@ -43,10 +49,13 @@ export default function ContactForm() {
             <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 dark:text-slate-100">Start a Project</h2>
             <p className="mt-3 max-w-md text-slate-600 dark:text-slate-400">Tell us what you're trying to build.</p>
 
-            <ul className="mt-6 space-y-4">
+            <ul className="mt-6 space-y-1">
               {infoItems.map(({ icon: Icon, text }) => (
-                <li key={text} className="flex items-start gap-3">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-300">
+                <li
+                  key={text}
+                  className="group -mx-2 flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-slate-50 dark:hover:bg-slate-900/60"
+                >
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-transform duration-200 group-hover:scale-110 dark:bg-blue-500/10 dark:text-blue-300">
                     <Icon size={15} />
                   </div>
                   <p className="pt-1.5 text-sm text-slate-600 dark:text-slate-400">{text}</p>
@@ -94,7 +103,7 @@ export default function ContactForm() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-blue-600 py-2.5 text-sm font-medium text-white shadow-sm shadow-blue-600/20 transition-all hover:bg-blue-500 hover:shadow-md hover:shadow-blue-600/30"
+                  className="w-full rounded-lg bg-blue-600 py-2.5 text-sm font-medium text-white shadow-sm shadow-blue-600/20 transition-all duration-200 hover:bg-blue-500 hover:shadow-md hover:shadow-blue-600/30 active:scale-[0.98]"
                 >
                   Send
                 </button>

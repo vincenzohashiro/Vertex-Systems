@@ -46,8 +46,8 @@ export default function MarketingNav() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-2">
-          <VertexMark className="h-8 w-auto" />
+        <Link to="/" className="group flex items-center gap-2">
+          <VertexMark className="h-8 w-auto transition-transform duration-200 group-hover:scale-105" />
           <span className="font-display text-base font-bold text-slate-900 dark:text-slate-100">Vertex Systems</span>
         </Link>
 
@@ -56,9 +56,10 @@ export default function MarketingNav() {
             <button
               key={item.id}
               onClick={() => goToSection(item.id)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100"
+              className="group relative rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100"
             >
               {item.label}
+              <span className="absolute inset-x-3 -bottom-px h-0.5 origin-left scale-x-0 rounded-full bg-blue-500 transition-transform duration-200 ease-out group-hover:scale-x-100" />
             </button>
           ))}
         </nav>
@@ -66,7 +67,7 @@ export default function MarketingNav() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => goToSection('contact')}
-            className="hidden rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-blue-600/20 transition-all hover:bg-blue-500 hover:shadow-md hover:shadow-blue-600/30 sm:inline-flex"
+            className="hidden rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-blue-600/20 transition-all duration-200 hover:bg-blue-500 hover:shadow-md hover:shadow-blue-600/30 active:scale-95 sm:inline-flex"
           >
             Start a Project
           </button>

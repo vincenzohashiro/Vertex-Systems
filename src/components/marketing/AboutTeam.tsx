@@ -27,8 +27,13 @@ export default function AboutTeam() {
                 .join('')
                 .toUpperCase()
               return (
-                <div key={role} className="flex flex-col items-center gap-2 rounded-lg p-3 text-center">
-                  <div className={`flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold ${accentClasses[accent]}`}>
+                <div
+                  key={role}
+                  className="group flex flex-col items-center gap-2 rounded-lg p-3 text-center transition-colors duration-200 hover:bg-slate-50 dark:hover:bg-slate-800/60"
+                >
+                  <div
+                    className={`flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold transition-transform duration-200 group-hover:scale-110 ${accentClasses[accent]}`}
+                  >
                     {initials}
                   </div>
                   <p className="text-xs font-semibold text-slate-700 dark:text-slate-300">{role}</p>

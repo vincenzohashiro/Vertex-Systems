@@ -1,4 +1,5 @@
 import { ArrowRight, Bell, Search, Sparkles } from 'lucide-react'
+import CountUp from './CountUp'
 import Reveal from './Reveal'
 
 const stats = [
@@ -64,8 +65,10 @@ export default function Hero() {
           <Reveal delay={260}>
             <dl className="mt-12 grid max-w-lg grid-cols-3 gap-4 border-t border-slate-200 pt-6 sm:gap-6 dark:border-slate-800">
               {stats.map((stat) => (
-                <div key={stat.label} className="min-w-0">
-                  <dt className="font-display text-2xl font-bold text-slate-900 dark:text-slate-100">{stat.value}</dt>
+                <div key={stat.label} className="min-w-0 transition-transform duration-200 hover:-translate-y-0.5">
+                  <dt className="font-display text-2xl font-bold text-slate-900 dark:text-slate-100">
+                    <CountUp value={stat.value} />
+                  </dt>
                   <dd className="mt-1 text-xs leading-snug text-slate-500 dark:text-slate-400">{stat.label}</dd>
                 </div>
               ))}
