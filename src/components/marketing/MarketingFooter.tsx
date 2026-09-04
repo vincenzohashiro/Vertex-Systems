@@ -41,6 +41,14 @@ export default function MarketingFooter() {
                   </button>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/team"
+                  className="text-sm text-slate-500 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100"
+                >
+                  Team
+                </Link>
+              </li>
             </ul>
           </div>
 

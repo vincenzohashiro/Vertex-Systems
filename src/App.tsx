@@ -8,6 +8,9 @@ import ZelvariaCaseStudy from './pages/marketing/ZelvariaCaseStudy'
 import BookingStub from './pages/systems/BookingStub'
 import OperationsStub from './pages/systems/OperationsStub'
 import AutomationStub from './pages/systems/AutomationStub'
+import TeamIndex from './pages/team/TeamIndex'
+import JamaicaBetitaProfile from './pages/team/JamaicaBetitaProfile'
+import VincentMangaliliProfile from './pages/team/VincentMangaliliProfile'
 import Dashboard from './pages/Dashboard'
 import Leads from './pages/Leads'
 import Customers from './pages/Customers'
@@ -29,6 +32,9 @@ export default function App() {
             <Route path="/systems/booking" element={<BookingStub />} />
             <Route path="/systems/operations" element={<OperationsStub />} />
             <Route path="/systems/automation" element={<AutomationStub />} />
+            <Route path="/team" element={<TeamIndex />} />
+            <Route path="/team/jamaica-faith-betita" element={<JamaicaBetitaProfile />} />
+            <Route path="/team/vincent-mangalili" element={<VincentMangaliliProfile />} />
           </Route>
 
           <Route path="/systems/crm/login" element={<Login />} />

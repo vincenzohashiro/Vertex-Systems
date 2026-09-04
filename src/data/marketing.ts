@@ -280,9 +280,36 @@ export const processSteps: ProcessStep[] = [
   { step: 'Support', description: 'Stay involved after launch as the business changes.' },
 ]
 
-export const teamRoles = ['Systems & Automation', 'Design and Marketing', 'Leads Management and Customer Service']
+export const teamRoles = ['Systems & Automation', 'Design & Marketing', 'Web Development']
 
 export const teamBlurb =
   'Vertex Systems is a small, technical team that designs and builds the software businesses run on. ' +
   'We work directly with each client from first conversation to launch, and stay involved after: ' +
   'no account managers, no handoffs.'
+
+export type TeamAccent = 'blue' | 'emerald' | 'amber'
+
+export interface TeamMember {
+  slug: string
+  name: string
+  role: string
+  accent: TeamAccent
+  tagline: string
+}
+
+export const teamMembers: TeamMember[] = [
+  {
+    slug: 'vincent-mangalili',
+    name: 'Vincent Andrew Mangalili',
+    role: 'Systems & Automation',
+    accent: 'blue',
+    tagline: 'Automation Specialist · Operations Specialist · Full-Stack Developer',
+  },
+  {
+    slug: 'jamaica-faith-betita',
+    name: 'Jamaica Faith Betita',
+    role: 'Design & Marketing',
+    accent: 'emerald',
+    tagline: 'Focused on making your success the priority.',
+  },
+]

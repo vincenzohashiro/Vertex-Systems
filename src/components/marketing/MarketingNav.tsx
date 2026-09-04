@@ -62,6 +62,13 @@ export default function MarketingNav() {
               <span className="absolute inset-x-3 -bottom-px h-0.5 origin-left scale-x-0 rounded-full bg-blue-500 transition-transform duration-200 ease-out group-hover:scale-x-100" />
             </button>
           ))}
+          <Link
+            to="/team"
+            className="group relative rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100"
+          >
+            Team
+            <span className="absolute inset-x-3 -bottom-px h-0.5 origin-left scale-x-0 rounded-full bg-blue-500 transition-transform duration-200 ease-out group-hover:scale-x-100" />
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -97,6 +104,13 @@ export default function MarketingNav() {
               {item.label}
             </button>
           ))}
+          <Link
+            to="/team"
+            onClick={() => setMenuOpen(false)}
+            className="rounded-md px-2 py-2.5 text-left text-sm font-medium text-slate-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-900"
+          >
+            Team
+          </Link>
           <button
             onClick={() => goToSection('contact')}
             className="mt-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-blue-500"
