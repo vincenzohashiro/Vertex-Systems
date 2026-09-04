@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, CheckCircle2, Database, ExternalLink, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { flagshipProject } from '../../data/marketing'
+import { assetPath } from '../../lib/assetPath'
 import { Card } from '../../components/ui'
 import Reveal from '../../components/marketing/Reveal'
 
@@ -66,7 +67,7 @@ export default function ZelvariaCaseStudy() {
                 </div>
                 {flagshipProject.screenshot && (
                   <img
-                    src={flagshipProject.screenshot}
+                    src={assetPath(flagshipProject.screenshot)}
                     alt="Zelvaria website preview, frontend experience"
                     className="w-full object-cover object-top"
                     loading="lazy"

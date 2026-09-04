@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, ExternalLink, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { flagshipProject } from '../../data/marketing'
+import { assetPath } from '../../lib/assetPath'
 import Reveal from './Reveal'
 
 export default function FlagshipProject() {
@@ -37,7 +38,7 @@ export default function FlagshipProject() {
                 </div>
                 {flagshipProject.screenshot && (
                   <img
-                    src={flagshipProject.screenshot}
+                    src={assetPath(flagshipProject.screenshot)}
                     alt="Zelvaria website preview"
                     className="w-full object-cover object-top"
                     loading="lazy"

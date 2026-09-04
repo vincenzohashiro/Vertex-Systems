@@ -1,5 +1,6 @@
 import { CheckCircle2, Clock, Mail, MessageSquare } from 'lucide-react'
 import { useState, type FormEvent } from 'react'
+import { assetPath } from '../../lib/assetPath'
 import { Card } from '../ui'
 import Reveal from './Reveal'
 
@@ -29,7 +30,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-screen">
         <Reveal className="relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-white lg:min-h-screen">
           <img
-            src="/vertex-logo-full.png"
+            src={assetPath('/vertex-logo-full.png')}
             alt="Vertex Systems"
             className="h-auto max-h-[60vh] w-full max-w-md object-contain p-10"
           />

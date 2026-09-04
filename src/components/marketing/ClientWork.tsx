@@ -1,5 +1,6 @@
 import { ExternalLink } from 'lucide-react'
 import { clientWork } from '../../data/marketing'
+import { assetPath } from '../../lib/assetPath'
 import { Card } from '../ui'
 import Reveal from './Reveal'
 
@@ -21,7 +22,7 @@ export default function ClientWork() {
                 <div className="aspect-video w-full overflow-hidden border-b border-slate-100 bg-slate-100 dark:border-slate-800 dark:bg-slate-800">
                   {project.screenshot ? (
                     <img
-                      src={project.screenshot}
+                      src={assetPath(project.screenshot)}
                       alt={`${project.title} website preview`}
                       className="h-full w-full object-cover object-top"
                       loading="lazy"
